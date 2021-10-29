@@ -10,16 +10,16 @@ def heapifyInRoot(arr, n, i):
 
 	# See if left child of root exists and is
 	# greater than root
-	elif l < n and arr[i] < arr[l]:
+	if l < n and arr[i] < arr[l]:
 		largest = l
 
 	# See if right child of root exists and is
 	# greater than root
-	elif r < n and arr[largest] < arr[r]:
+	if r < n and arr[largest] < arr[r]:
 		largest = r
 
 	# Change root, if needed
-	elif largest != i:
+	if largest != i:
 		arr[i],arr[largest] = arr[largest],arr[i] # swap
 
 
